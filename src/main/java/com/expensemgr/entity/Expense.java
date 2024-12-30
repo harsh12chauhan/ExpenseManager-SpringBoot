@@ -4,41 +4,60 @@ import java.sql.Date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name="expenses")
 public class Expense {
-	
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="expenseid")
-	int expenseId;
+	@Column(name="expenceid")
+	int expenseid;	
+	
+	@Column(name="userid")
+	int userid;
+	
+	@Column(name="categoryid")
+	int categoryid;
 	
 	@Column(name="expensename")
 	String expenseName;
-	
-	@Column(name="expensecategory")
-	String expenseCategory;
-	
+
 	@Column(name="expensedescription")
 	String expenseDescription;
 	
-	@Column(name="expenseidamount")
+	@Column(name="expenseamount")
 	String expenseAmount;
+	
+	@Column(name="expensemode")
+	String expensemode;
 	
 	@Column(name="expensedate")
 	Date expenseDate;
-	
-	public int getExpenseId() {
-		return expenseId;
+
+	public int getExpenseid() {
+		return expenseid;
 	}
 
-	public void setExpenseId(int expenseId) {
-		this.expenseId = expenseId;
+	public void setExpenseid(int expenseid) {
+		this.expenseid = expenseid;
+	}
+
+	public int getUserid() {
+		return userid;
+	}
+
+	public void setUserid(int userid) {
+		this.userid = userid;
+	}
+
+	public int getCategoryid() {
+		return categoryid;
+	}
+
+	public void setCategoryid(int categoryid) {
+		this.categoryid = categoryid;
 	}
 
 	public String getExpenseName() {
@@ -47,14 +66,6 @@ public class Expense {
 
 	public void setExpenseName(String expenseName) {
 		this.expenseName = expenseName;
-	}
-
-	public String getExpenseCategory() {
-		return expenseCategory;
-	}
-
-	public void setExpenseCategory(String expenseCategory) {
-		this.expenseCategory = expenseCategory;
 	}
 
 	public String getExpenseDescription() {
@@ -73,6 +84,14 @@ public class Expense {
 		this.expenseAmount = expenseAmount;
 	}
 
+	public String getExpensemode() {
+		return expensemode;
+	}
+
+	public void setExpensemode(String expensemode) {
+		this.expensemode = expensemode;
+	}
+
 	public Date getExpenseDate() {
 		return expenseDate;
 	}
@@ -80,4 +99,6 @@ public class Expense {
 	public void setExpenseDate(Date expenseDate) {
 		this.expenseDate = expenseDate;
 	}
+
+	
 }
