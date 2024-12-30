@@ -2,6 +2,7 @@ package com.expensemgr.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,19 +65,22 @@ public class ExpenseServicesImpl implements ExpenseServices {
 			existingExpense.setCategoryid(expense.getCategoryid());
 			flag = true;
 		}
-		if(!existingExpense.getExpenseName().equals(expense.getExpenseName())) {
-			existingExpense.setExpenseName(expense.getExpenseName());
+		if(existingExpense.getExpenseamount() == null && expense.getExpenseamount() != null || existingExpense.getExpenseamount() != expense.getExpenseamount()) {
+			existingExpense.setExpenseamount(expense.getExpenseamount());
 			flag = true;
 		}
-		if(!existingExpense.getExpenseDescription().equals(expense.getExpenseDescription())) {
-			existingExpense.setExpenseDescription(expense.getExpenseDescription());
+		if (existingExpense.getExpensedate() == null && expense.getExpensedate() != null || !existingExpense.getExpensedate().equals(expense.getExpensedate())) {
+			existingExpense.setExpensedate(expense.getExpensedate());
 			flag = true;
 		}
-		if(!existingExpense.getExpenseAmount().equals(expense.getExpenseAmount())) {
-			existingExpense.setExpenseAmount(expense.getExpenseAmount());
+		if (existingExpense.getExpensename() == null && expense.getExpensename() != null || !existingExpense.getExpensename().equals(expense.getExpensename())) {
+			existingExpense.setExpensename(expense.getExpensename());
 			flag = true;
 		}
-		
+		if (existingExpense.getExpensedescription() == null && expense.getExpensedescription() != null || !existingExpense.getExpensedescription().equals(expense.getExpensedescription())) {
+			existingExpense.setExpensedescription(expense.getExpensedescription());
+			flag = true;
+		}
 		if(!existingExpense.getExpensemode().equals(expense.getExpensemode())) {
 			existingExpense.setExpensemode(expense.getExpensemode());
 			flag = true;

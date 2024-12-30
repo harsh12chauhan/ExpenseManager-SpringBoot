@@ -4,20 +4,20 @@ import java.sql.Date;
 
 public class ExpenseDTO {
 	
-	int expenseId;
+	int expenseid;
 	int userid;
 	int categoryid;
-	String expenseName;	
-	String expenseDescription;
-	String expenseAmount;
+	String expensename;	
+	String expensedescription;
+	String expenseamount;
 	String expensemode;
-	Date expenseDate;
+	Date expensedate;
 	
-	public int getExpenseId() {
-		return expenseId;
+	public int getExpenseid() {
+		return expenseid;
 	}
-	public void setExpenseId(int expenseId) {
-		this.expenseId = expenseId;
+	public void setExpenseid(int expenseid) {
+		this.expenseid = expenseid;
 	}
 	public int getUserid() {
 		return userid;
@@ -31,23 +31,23 @@ public class ExpenseDTO {
 	public void setCategoryid(int categoryid) {
 		this.categoryid = categoryid;
 	}
-	public String getExpenseName() {
-		return expenseName;
+	public String getExpensename() {
+		return expensename;
 	}
-	public void setExpenseName(String expenseName) {
-		this.expenseName = expenseName;
+	public void setExpensename(String expensename) {
+		this.expensename = expensename;
 	}
-	public String getExpenseDescription() {
-		return expenseDescription;
+	public String getExpensedescription() {
+		return expensedescription;
 	}
-	public void setExpenseDescription(String expenseDescription) {
-		this.expenseDescription = expenseDescription;
+	public void setExpensedescription(String expensedescription) {
+		this.expensedescription = expensedescription;
 	}
-	public String getExpenseAmount() {
-		return expenseAmount;
+	public String getExpenseamount() {
+		return expenseamount;
 	}
-	public void setExpenseAmount(String expenseAmount) {
-		this.expenseAmount = expenseAmount;
+	public void setExpenseamount(String expenseamount) {
+		this.expenseamount = expenseamount;
 	}
 	public String getExpensemode() {
 		return expensemode;
@@ -55,10 +55,11 @@ public class ExpenseDTO {
 	public void setExpensemode(String expensemode) {
 		this.expensemode = expensemode;
 	}
-	public Date getExpenseDate() {
-		return expenseDate;
+	public Date getExpensedate() {
+		return expensedate;
 	}
-	public void setExpenseDate(Date expenseDate) {
-		this.expenseDate = expenseDate;
+	public void setExpensedate(Date expensedate) {
+		this.expensedate = expensedate;
 	}
+	
 }

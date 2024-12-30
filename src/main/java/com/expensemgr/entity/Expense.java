@@ -4,6 +4,8 @@ import java.sql.Date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -12,7 +14,8 @@ import jakarta.persistence.Table;
 public class Expense {
 
 	@Id
-	@Column(name="expenceid")
+	@Column(name="expenseid")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int expenseid;	
 	
 	@Column(name="userid")
@@ -22,19 +25,19 @@ public class Expense {
 	int categoryid;
 	
 	@Column(name="expensename")
-	String expenseName;
+	String expensename;
 
 	@Column(name="expensedescription")
-	String expenseDescription;
+	String expensedescription;
 	
 	@Column(name="expenseamount")
-	String expenseAmount;
+	String expenseamount;
 	
 	@Column(name="expensemode")
 	String expensemode;
 	
 	@Column(name="expensedate")
-	Date expenseDate;
+	Date expensedate;
 
 	public int getExpenseid() {
 		return expenseid;
@@ -60,28 +63,28 @@ public class Expense {
 		this.categoryid = categoryid;
 	}
 
-	public String getExpenseName() {
-		return expenseName;
+	public String getExpensename() {
+		return expensename;
 	}
 
-	public void setExpenseName(String expenseName) {
-		this.expenseName = expenseName;
+	public void setExpensename(String expensename) {
+		this.expensename = expensename;
 	}
 
-	public String getExpenseDescription() {
-		return expenseDescription;
+	public String getExpensedescription() {
+		return expensedescription;
 	}
 
-	public void setExpenseDescription(String expenseDescription) {
-		this.expenseDescription = expenseDescription;
+	public void setExpensedescription(String expensedescription) {
+		this.expensedescription = expensedescription;
 	}
 
-	public String getExpenseAmount() {
-		return expenseAmount;
+	public String getExpenseamount() {
+		return expenseamount;
 	}
 
-	public void setExpenseAmount(String expenseAmount) {
-		this.expenseAmount = expenseAmount;
+	public void setExpenseamount(String expenseamount) {
+		this.expenseamount = expenseamount;
 	}
 
 	public String getExpensemode() {
@@ -92,12 +95,12 @@ public class Expense {
 		this.expensemode = expensemode;
 	}
 
-	public Date getExpenseDate() {
-		return expenseDate;
+	public Date getExpensedate() {
+		return expensedate;
 	}
 
-	public void setExpenseDate(Date expenseDate) {
-		this.expenseDate = expenseDate;
+	public void setExpensedate(Date expensedate) {
+		this.expensedate = expensedate;
 	}
 
 	
